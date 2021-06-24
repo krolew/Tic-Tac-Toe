@@ -56,6 +56,7 @@ const Game = (function(){
                     winner = true;
                 }
             }
+            
         }
         else if(moves % 2 !== 0){
             for(let i in winIndex){
@@ -63,6 +64,9 @@ const Game = (function(){
                     para.textContent = "X's win";
                     winner = true;
                 }
+            }
+            if(moves === 9 && winner === false){ 
+                para.textContent = "Tie my friends :)"
             }
         }
     }
